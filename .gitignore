@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# npm
+node_modules
+
+# Built CSS/JS
+dist/bundle*
+
+# Misc
+yarn-error.log
