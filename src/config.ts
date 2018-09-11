@@ -20,3 +20,5 @@ export const audio = {
     up: 'transparent'
   }
 };
+
+export default { three, audio };

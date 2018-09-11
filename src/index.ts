@@ -2,8 +2,8 @@ import 'normalize.css';
 import './base.css';
 
 import * as THREE from 'three';
-import * as STATE from './state.ts';
-import * as DEFAULT from './config.ts';
+import { default as STATE } from './state';
+import { default as DEFAULT } from './config';
 
 // THREE configuration
 
@@ -93,7 +93,7 @@ function loaded() {
   STATE.renderer.setPixelRatio(window.devicePixelRatio);
   STATE.renderer.setSize(window.innerWidth, window.innerHeight);
 
-  let container = document.getElementById('app');
+  let container = document.getElementById('app')!;
   container.appendChild(STATE.renderer.domElement);
 
   loop();
@@ -149,5 +149,5 @@ function onKeyUp(evt: KeyboardEvent) {
 function onWindowResize() {
   STATE.camera.aspect = window.innerWidth / window.innerHeight;
   STATE.camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  STATE.renderer.setSize(window.innerWidth, window.innerHeight);
 }

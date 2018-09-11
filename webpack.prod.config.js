@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  entry: ['./src/index.tsx'],
+  entry: ['./src/index.ts'],
   devtool: 'source-map',
   output: {
     path: path.join(__dirname, 'dist'),

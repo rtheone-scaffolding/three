@@ -8,6 +8,7 @@
     "bundle": "./node_modules/.bin/webpack",
     "bundle-prod": "./node_modules/.bin/webpack --config webpack.prod.config.js",
     "test": "./node_modules/.bin/jest",
+    "type-check": "tsc",
     "prettier": "./node_modules/.bin/prettier --config .prettierrc.json --write src/**/*.ts",
     "start": "./node_modules/.bin/webpack-dev-server"
   },
@@ -19,22 +20,24 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.0.1",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-typescript": "^7.0.0",
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^23.3.2",
+    "@types/node": "^10.9.4",
+    "@types/three": "^0.92.18",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
-    "jest": "^23.5.0",
+    "jest": "^23.6.0",
     "mini-css-extract-plugin": "^0.4.2",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "prettier": "^1.14.2",
     "ts-jest": "^23.1.4",
     "typescript": "^3.0.3",
-    "webpack": "^4.17.2",
+    "webpack": "^4.18.0",
     "webpack-cli": "^3.1.0",
     "webpack-closure-compiler": "^2.1.6",
-    "webpack-dev-server": "^3.1.7"
+    "webpack-dev-server": "^3.1.8"
   },
   "jest": {
     "transform": {

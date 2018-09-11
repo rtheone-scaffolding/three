@@ -1,11 +1,11 @@
 let state = {
-  clock: null,
-  scene: null,
-  camera: null,
-  renderer: null,
+  clock: {} as THREE.Clock,
+  scene: {} as THREE.Scene,
+  camera: {} as THREE.PerspectiveCamera,
+  renderer: {} as THREE.WebGLRenderer,
   entities: [],
   keyboard: {
-    keys: [],
+    keys: [] as number[],
     isPressed: function(keyCode: number): boolean {
       return typeof this.keys[keyCode] !== 'undefined'
         ? this.keys[keyCode] >= 1
@@ -27,7 +27,7 @@ let state = {
   },
   loader: {
     loadingAssets: 0,
-    onLoad: null,
+    onLoad: () => {},
     prepareAssets: function (numberOfAssets = 1) {
       this.loadingAssets += numberOfAssets;
     },
@@ -40,4 +40,4 @@ let state = {
   },
 };
 
-module.exports = state;
+export default state;
